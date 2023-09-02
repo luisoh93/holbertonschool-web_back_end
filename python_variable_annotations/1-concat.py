@@ -7,7 +7,6 @@ This module contains a type-annotated function.
 
 
 def concat(str1: str, str2: str) -> str:
-
     """
 
     Args:
