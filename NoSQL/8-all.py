@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-""" All module. """
-from pymongo.collection import Collection
+""" List documents """
+import pymongo
 
 
-def list_all(mongo_collection: Collection):
+def list_all(mongo_collection) -> list:
     """
-        Lists all documents in a collection.
+        Lists all documents in a collection
 
         Args:
-            mongo_collection: the collection to list.
+            mongo_collection: Collection of object
 
         Return:
-            The list of documents or an empty list if no documents.
+            List with documents, otherwise []
     """
-    return mongo_collection.find()
+    documents: list = []
+
+    for document in mongo_collection.find():
+        documents.append(document)
+
+    return documents
