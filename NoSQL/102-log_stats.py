@@ -36,7 +36,7 @@ if __name__ == "__main__":
             "ip": "$_id",
             "count": 1
         }}
-    }}
+    ])
 
     for ip in ips:
         print(f"\t{ip.get('ip')}: {ip.get('count')}")
